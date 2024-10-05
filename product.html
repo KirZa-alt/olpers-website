@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+   
+        .product {
+            text-align: center;
+            margin: 20px;
+        }
+        #product-image{
+            height: 200px;
+            width: 280px;
+        }
+        .checkout-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="product">
+    <img id="product-image" src="" alt="">
+    <h3 id="product-title"></h3>
+    <p id="product-price"></p>
+    <div>
+        <button onclick="changeQuantity(-1)">-</button>
+        <span id="product-quantity">1</span>
+        <button onclick="changeQuantity(1)">+</button>
+    </div>
+    <p>Subtotal: <span id="subtotal">0</span></p>
+    <button class="checkout-button" onclick="checkout()">Checkout</button>
+</div>
+
+<script>
+    // Sample product data
+    const productData = {
+        title: 'Olpers Flavored Milk 180ml Mango',
+        price: 75,
+        image: './10.jpg'
+
+        
+        
+    };
+
+    // Load product data
+    document.getElementById('product-image').src = productData.image;
+    document.getElementById('product-title').innerText = productData.title;
+    document.getElementById('product-price').innerText = `Rs ${productData.price}`;
+    document.getElementById('subtotal').innerText = `Rs ${productData.price}`;
+
+    let quantity = 1;
+
+    function changeQuantity(amount) {
+        quantity += amount;
+        if (quantity < 1) quantity = 1;
+        document.getElementById('product-quantity').innerText = quantity;
+        document.getElementById('subtotal').innerText = `Rs ${quantity * productData.price}`;
+    }
+
+    function checkout() {
+        // Redirect to checkout page
+        window.location.href = 'checkout.html';
+    }
+</script>
+
+</body>
+</html>

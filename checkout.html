@@ -1,0 +1,52 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        .form-container {
+            margin: 20px;
+            text-align: left;
+        }
+        .confirm-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container" style="margin-left: 4vw;">
+    <h2 style="color: red; text-transform: uppercase;">Customer Details</h2>
+    <form id="customer-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+        
+        <label for="contact">Contact No:</label>
+        <input type="text" id="contact" required><br><br>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" required><br><br>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" required><br><br>
+        
+        <button type="button" class="confirm-button" onclick="confirmOrder()">Confirm</button>
+    </form>
+</div>
+
+<script>
+    function confirmOrder() {
+        alert("Your order is being confirmed");
+        // Optionally, redirect or handle the order confirmation
+        // window.location.href = 'thankyou.html'; // Redirect to thank you page
+    }
+</script>
+
+</body>
+</html>

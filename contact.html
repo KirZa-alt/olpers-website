@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./olpers.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="containers">
+        <div class="logo">
+            <img src="./Olpers-Logo-1.jpg" alt="" width="200px" height="60px">
+        </div>
+       <div class="icon"> <i class="material-icons" style="margin: 3vw; margin-right: 1vw;  margin-left: 1vw; color: rgba(0, 0, 0, 0.514);" >phone  </i></div>
+        <div class="phone">
+            <h4>Phone <br>+92-332-4978526 </h4> 
+            
+        </div>
+        <div class="search">
+            <form action="/action_page.php">
+                <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Search here..." name="search" style="margin-bottom: 1vw;" > 
+                <i class="material-icons">search</i>
+              </form>
+        </div>
+        <div class="icons">
+            <div class="dropdown">
+                <i class="material-icons" style="margin: 3vw; margin-right: 1vw; margin-left: 0.5vw;cursor: pointer;">person</i>
+                <div class="dropdown-content">
+                    <a href="./sign in.html">Sign In</a>
+                    <a href="./register.html">Register</a>
+                </div>
+            </div>
+            <i class="material-icons" style="margin: 3vw; margin-right: 1vw;  margin-left: 0.5vw; display: none;" >trolley</i>
+        </div>
+        <div class="cart" style="display: none;"><h3 style="color: rgb(201, 15, 15);">your cart <br> RS 0</h3>
+    
+        </div>
+       
+    </div>
+    <header>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+        <nav class="navbar">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html">Categories</a>
+        <ul>
+            <li><a href="">Hot SKU</a></li> 
+            <li><a href="#hot">Hot SKU</a></li> 
+            <li><a href="#flavour">Flavoured Milk</a></li> 
+            <li><a href="#high">High Calcium Low Fat Milk</a></li>  
+            <li><a href="#dairy">Dairy Cream</a></li> 
+            <li><a href="#desi">Desi Ghee</a></li> 
+            <li><a href="#economy">Economy Milk</a></li>
+            <li><a href="#full">Full Cream Milk</a></li> 
+            <li><a href="#powder">Full Cream Milk Powder</a></li>
+            <li><a href="#special">Speacialized Tea Creamer</a></li> 
+        </ul>
+        </li>
+        <li><a href="./recipie.html">Recipes</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <form class="locations">
+            <i class="material-icons">place</i>
+            <select id="location" name="location ">
+                <option value="Location">Location</option>
+              <option value="Lahore">Lahore</option>
+              <option value="Karachi">Karachi</option>
+              <option value="Lahore">Lahore</option>
+              <option value="Islamabad">Islamabad</option>
+              <option value="Other">Other</option>
+            </select>
+           
+           </form>
+    </ul>
+    <div class="shoping">
+        <i class="material-icons" style="margin: 3vw; margin-right: 1vw;  margin-left: 0.5vw;" >trolley</i>
+        <h3>shopping Cart</h3>
+    </div>
+        </nav>
+    </header>
+    <div class="containe">
+        <h1>Select Your City</h1>
+        
+       
+        <select id="city" name="city">
+            <option value="">Select City</option>
+            <option value="karachi">Karachi</option>
+            <option value="lahore">Lahore</option>
+            <option value="islamabad">Islamabad</option>
+        </select>
+    
+       
+        <select id="area" name="area">
+            <option value="">Select Area</option>
+        </select>
+    
+    </div>
+<!-- contact page boxes -->
+<div class="boxes">
+    <div class="box-1">
+  <center> <img src="./em.png" alt=""></center>
+  <center> <h2>Email Address</h2></center>
+   <p>support@olpersmart.pk</p>
+    </div>
+    <div class="box-2">
+        <center><img src="./ph.png" alt=""></center>
+        <center> <h2>Phone Number</h2></center>
+<center><p>+92-332-4978526</p></center>
+    </div>
+</div>
+<form action="" class="contact-form">
+    <h2>Contact Us</h2>
+    <div class="input-group">
+        <i class="material-icons" style="color: red;">person</i>
+        <input type="text" placeholder="Enter Your Name" class="name" required>
+    </div>
+    <div class="input-group">
+        <i class="material-icons" style="color: red;">email</i>
+        <input type="email" placeholder="Enter Email Address" class="email" required>
+    </div>
+    <div class="input-group">
+        <i class="material-icons" style="color: red;">phone</i>
+        <input type="tel" placeholder="Enter Phone Number " class="phone" required>
+    </div>
+    <div class="input-group">
+        <i class="material-icons" style="color: red;">subject</i>
+        <input type="text" placeholder="Enter the Subject" class="subject" required>
+    </div>
+    <div class="input-group">
+        <i class="material-icons" style="color: red;">message</i>
+        <textarea name="message" placeholder="Enter Message" id="mess" rows="6" required></textarea>
+    </div>
+    <div class="btn">
+        <button type="submit">Contact Us</button>
+    </div>
+</form>
+
+<div class="redbox">
+    <h1>Explore Olpers Mart to buy dairy items in Karachi, Lahore, and Islamabad</h1>
+    <a href="./index.html"> <button>Explore <br>Products <br>  &#x2192;</button></a>
+   
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>OlpersMart is your direct source for premium dairy products produced by FrieslandCampina Engro Pakistan Limited, offering nationwide doorstep delivery for unparalleled convenience.</p>
+            <p><strong>Phone:</strong> +923324978526</p>
+            <p><strong>Email:</strong> support@olpersmart.pk</p>
+            <i id="icn" class="fa-brands fa-youtube" style="margin-left: 2vw;"></i>
+        </div>
+        <div class="footer-right">
+            <ul class="quick-links">
+                <h1 style="font-size: 1.5rem;">Quick-Links</h1>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Bundle Offers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/lwea5wpZTcY?si=C_le0A2PKuZCjB2q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <button class="page-up-button" onclick="pageUp()">↑</button>
+    <div class="footer-bottom">
+        <p>Powered by Rholab Interactive 2024</p>
+        <ul>
+          <a href=""> <li>Terms & Conditions</li></a>
+            <a href=""><li>Privacy & policy</li></a>
+           <a href=""><li>Delivery Policy</li></a>
+            <a href=""><li>Exchange Return</li></a>
+        </ul>
+    </div>
+</footer>
+
+<script>
+       
+
+    const citySelect = document.getElementById('city');
+const areaSelect = document.getElementById('area');
+
+// Data for dependent area options based on city
+const areaOptions = {
+    karachi: ['Abbas-Town', 'Abuzar-Ghaffari', 'Agra-Taj-Colony',' Ahsanabad', 'Akhtar-Colony', 'Al-Asif-Square', 'Al-Azhar-Garden', 'Al-Falah', 'Ali-Akbar-Shah', 'Ayub Goth' , ' Azam-Basti', 'Azizabad', 'Baghdadi' , 'Bahadurabad', 'Bakhtawar' , 'Behind-Jacobline' , 'Bihar-Colony', 'Bhittaiabad', 'Bhim-Pura-Ghanchi-Para' , 'Boat-Basin', 'BufferZone', 'Bundhani-Colony', 'C-Area' ,'Cattle-Colony' ],
+    lahore: ['DHA', 'Gulberg', 'Model Town', 'Johar Town',' Ahsanabad', 'Akhtar-Colony', 'Al-Asif-Square', 'Al-Azhar-Garden', 'Al-Falah', 'Ali-Akbar-Shah', 'Ayub Goth' , ' Azam-Basti', 'Azizabad', 'Baghdadi' , 'Bahadurabad', 'Bakhtawar' , 'Behind-Jacobline' , 'Bihar-Colony', 'Bhittaiabad', 'Bhim-Pura-Ghanchi-Para' , 'Boat-Basin', 'BufferZone', 'Bundhani-Colony', 'C-Area' ,'Cattle-Colony'],
+    islamabad: ['F-6', 'F-7', 'G-11', 'Blue Area',' Ahsanabad', 'Akhtar-Colony', 'Al-Asif-Square', 'Al-Azhar-Garden', 'Al-Falah', 'Ali-Akbar-Shah', 'Ayub Goth' , ' Azam-Basti', 'Azizabad', 'Baghdadi' , 'Bahadurabad', 'Bakhtawar' , 'Behind-Jacobline' , 'Bihar-Colony', 'Bhittaiabad', 'Bhim-Pura-Ghanchi-Para' , 'Boat-Basin', 'BufferZone', 'Bundhani-Colony', 'C-Area' ,'Cattle-Colony' ]
+};
+
+// Event listener for city change
+citySelect.addEventListener('change', function() {
+    const selectedCity = this.value;
+
+    // Clear previous options
+    areaSelect.innerHTML = '<option value="">Select Area</option>';
+
+    // Populate areas based on the selected city
+    if (selectedCity) {
+        areaOptions[selectedCity].forEach(area => {
+            const optionElement = document.createElement('option');
+            optionElement.value = area.toLowerCase();
+            optionElement.textContent = area;
+            areaSelect.appendChild(optionElement);
+        });
+    }
+});
+function pageUp() {
+        window.scrollBy({
+            top: -window.innerHeight, // Scroll up by one viewport height
+            behavior: 'smooth' // Smooth scrolling
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        #checkout{
+            padding: 15px 20px;
+    border: none;
+
+    font-size: 14px;
+    cursor: pointer;
+        }
+        #checkout:hover{
+            background-color: black;
+        }
+    </style>
+    <div class="cart-container" style="margin-left: 3vw; margin-bottom: 2vw;">
+        <h2 id="product-name"></h2>
+        <img id="product-image" src="" alt="" />
+        <h3>Price: <span id="product-price"></span></h3>
+        
+        <div>
+            <label for="quantity">Quantity:</label>
+            <button id="decrease">-</button>
+            <input type="number" id="quantity" value="1" min="1" />
+            <button id="increase">+</button>
+        </div>
+        
+        <h3>Subtotal: <span id="subtotal">Rs 0</span></h3>
+        <button id="checkout" style="background-color: red; color: white;">Checkout</button>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+const productName = params.get('name');
+const productPrice = parseFloat(params.get('price'));
+const productImage = params.get('image');
+
+document.getElementById('product-name').innerText = productName;
+document.getElementById('product-price').innerText = `Rs ${productPrice}`;
+document.getElementById('product-image').src = productImage;
+
+let quantity = 1;
+
+document.getElementById('quantity').value = quantity;
+updateSubtotal();
+
+document.getElementById('increase').addEventListener('click', () => {
+    quantity++;
+    document.getElementById('quantity').value = quantity;
+    updateSubtotal();
+});
+
+document.getElementById('decrease').addEventListener('click', () => {
+    if (quantity > 1) {
+        quantity--;
+        document.getElementById('quantity').value = quantity;
+        updateSubtotal();
+    }
+});
+
+function updateSubtotal() {
+    const subtotal = (productPrice * quantity).toFixed(2);
+    document.getElementById('subtotal').innerText = `Rs ${subtotal}`;
+}
+
+document.getElementById('checkout').addEventListener('click', () => {
+    const total = (productPrice * quantity).toFixed(2);
+    alert(`Checkout successful! You have purchased ${quantity} of ${productName} for Rs ${total}`);
+    
+    // Update the total in the main container
+    const mainCartTotal = document.getElementById('cart-total');
+    const currentTotal = parseFloat(mainCartTotal.innerText.replace('Rs ', '')) || 0;
+    mainCartTotal.innerText = `Rs ${currentTotal + parseFloat(total)}`;
+    
+    // Redirect back to the main page
+    window.location.href = 'index.html';
+});
+
+    </script>
+</body>
+</html>
